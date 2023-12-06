@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: phsamnang-uihomework
-          image: kshrdautopilot/phsamnang-uihomework
+          image: kshrdautopilot/phsamnang-uihomework:2023-12-06-12-12-25
           ports:
             - containerPort: 3000
