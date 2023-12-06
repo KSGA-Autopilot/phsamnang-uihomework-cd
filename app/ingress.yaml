@@ -1,0 +1,21 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: phsamnang-uihomework-ingress
+  namespace: phsamnang
+spec:
+  tls:
+    - hosts:
+        - react.auto-nang.site
+      secretName: react-auto-nang-site-cert
+  rules:
+    - host: react.auto-nang.site
+      http:
+        paths:
+          - pathType: Prefix
+            path: /
+            backend:
+              service:
+                name: phsamnang-uihomework-svc
+                port:
+                  number: 3000
